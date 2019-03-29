@@ -13,7 +13,8 @@
     "test": "mocha tests --recursive"
   },
   "dependencies": {
-    "requireindex": "~1.1.0"
+    "requireindex": "~1.1.0",
+    "syllable": "^3.5.0"
   },
   "devDependencies": {
     "eslint": "~3.9.1",

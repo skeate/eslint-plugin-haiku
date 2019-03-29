@@ -1,7 +1,7 @@
 # eslint-plugin-haiku
 
-if you like haiku
-and want your comments to be
+if you like haiku  
+and want your comments to be  
 install this plugin
 
 ## Installation

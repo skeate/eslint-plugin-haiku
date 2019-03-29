@@ -1,11 +1,11 @@
 # Enforce haiku comments (haiku-comment)
 
-if you like haiku
-and want your comments to be
+if you like haiku  
+and want your comments to be  
 enable this rule
 
-blank lines are ignored.
-lines must be contiguous.
+blank lines are ignored.  
+lines must be contiguous.  
 there are some options.
 
 ## Rule Details
@@ -46,14 +46,14 @@ Examples:
 - `"includeBlockComments": true` (default) set to false if you only want to
   check haiku in `// line comments`.
 
-if you set both false,
-you might as well disable
+if you set both false,  
+you might as well disable  
 the entire rule.
 
 ## When Not To Use It
 
-if you hate haiku
-or aren't quite crazy enough
+if you hate haiku  
+or aren't quite crazy enough  
 to require it.
 
 ## Further Reading

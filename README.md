@@ -1,6 +1,8 @@
 # eslint-plugin-haiku
 
-Enforces comments in haiku
+if you like haiku
+and want your comments to be
+install this plugin
 
 ## Installation
 
@@ -24,28 +26,20 @@ Add `haiku` to the plugins section of your `.eslintrc` configuration file. You c
 
 ```json
 {
-    "plugins": [
-        "haiku"
-    ]
+  "plugins": ["haiku"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "haiku/rule-name": 2
-    }
+  "rules": {
+    "haiku/haiku-comments": 2
+  }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
-
-
-
+- [haiku-comments](docs/rules/haiku-comment.md)

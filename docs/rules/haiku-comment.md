@@ -1,36 +1,61 @@
-# Enforces haiku comments (haiku-comment)
+# Enforce haiku comments (haiku-comment)
 
-Please describe the origin of the rule here.
+if you like haiku
+and want your comments to be
+enable this rule
 
+blank lines are ignored.
+lines must be contiguous.
+there are some options.
 
 ## Rule Details
-
-This rule aims to...
 
 Examples of **incorrect** code for this rule:
 
 ```js
-
-// fill me in
-
+// this isn't haiku
 ```
 
 Examples of **correct** code for this rule:
 
 ```js
-
-// fill me in
-
+// a bad example
+// of haiku. but a good one
+// for the linting rule.
 ```
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+- `"prefix": ""` (default) if you want haiku enforcement, but only for certain
+  comments, you can use this to check for a prefix. the prefix must be on
+  every line.
+
+Examples:
+
+```js
+/* eslint  haiku:comment: ["error", { prefix: "~" }] */
+// not haiku. but it's ok
+//
+// ~ however, this is.
+// ~ and eslint will check it.
+// ~ and complain if wrong.
+```
+
+- `"includeLineComments": true` (default) set to false if you only want to check
+  haiku in `/* block comments */`.
+- `"includeBlockComments": true` (default) set to false if you only want to
+  check haiku in `// line comments`.
+
+if you set both false,
+you might as well disable
+the entire rule.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
+if you hate haiku
+or aren't quite crazy enough
+to require it.
 
 ## Further Reading
 
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+https://en.wikipedia.org/wiki/Haiku

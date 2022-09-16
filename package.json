@@ -9,16 +9,19 @@
   ],
   "author": "skeate",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha tests --recursive"
   },
+  "sideEffects": false,
   "dependencies": {
-    "requireindex": "~1.1.0",
-    "syllable": "^3.5.0"
+    "requireindex": "^1.2.0",
+    "syllable": "^5.0.0"
   },
   "devDependencies": {
-    "eslint": "~3.9.1",
-    "mocha": "^6.0.2"
+    "eslint": "^8.23.1",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.1"
   },
   "engines": {
     "node": ">=0.10.0"

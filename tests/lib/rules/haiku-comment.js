@@ -2,11 +2,9 @@
  * @fileoverview Enforces haiku comments
  * @author skeate
  */
-'use strict';
-
-var rule = require('../../../lib/rules/haiku-comment');
-var RuleTester = require('eslint').RuleTester;
-var ruleTester = new RuleTester();
+import rule from '../../../lib/rules/haiku-comment.js'
+import { RuleTester } from 'eslint'
+let ruleTester = new RuleTester()
 
 ruleTester.run('haiku-comment', rule, {
   valid: [
@@ -57,7 +55,7 @@ ruleTester.run('haiku-comment', rule, {
         // ~ not go quite so far insane
         // ~ obligatory
       `,
-      options: [{prefix: '~'}],
+      options: [{ prefix: '~' }],
     },
     {
       code: `
@@ -66,24 +64,24 @@ ruleTester.run('haiku-comment', rule, {
          * \u{1F333} arborization
          */
       `,
-      options: [{prefix: '🌳'}],
+      options: [{ prefix: '🌳' }],
     },
     {
       code: `
         // this isn't haiku.
         // sorry.
       `,
-      options: [{prefix: '#'}],
+      options: [{ prefix: '#' }],
     },
     {
       code: `/* neither is this */`,
-      options: [{prefix: '.'}],
+      options: [{ prefix: '.' }],
     },
   ],
   invalid: [
     {
       code: '// not a haiku',
-      errors: [{message: 'Not enough lines for haiku'}],
+      errors: [{ message: 'Not enough lines for haiku' }],
     },
     {
       code: `
@@ -102,7 +100,7 @@ freezer (2)`,
     },
     {
       code: '/* also not haiku */',
-      errors: [{message: 'Not enough lines for haiku'}],
+      errors: [{ message: 'Not enough lines for haiku' }],
     },
     {
       code: `/*
@@ -122,8 +120,8 @@ frobozz electric (5)`,
     // prefix
     {
       code: '// $ not a haiku',
-      options: [{prefix: '$'}],
-      errors: [{message: 'Not enough lines for haiku'}],
+      options: [{ prefix: '$' }],
+      errors: [{ message: 'Not enough lines for haiku' }],
     },
   ],
-});
+})
